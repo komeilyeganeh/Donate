@@ -23,7 +23,7 @@
   .footer-col-text {
     font-size: 14px;
     line-height: 32px;
-    color: var(--color-footer);
+    color: var(--color-gray-dark);
     margin-top: 18px;
     text-align: justify;
   }
@@ -36,7 +36,7 @@
   }
   .footer-service-list li,
   .footer-links-list li {
-    color: var(--color-footer);
+    color: var(--color-gray-dark);
     font-size: 14px;
   }
   .col-services,
@@ -46,7 +46,7 @@
   }
   .footer-links-list li a {
     display: block;
-    color: var(--color-footer);
+    color: var(--color-gray-dark);
   }
   .info-col-contact {
     margin-top: 18px;
@@ -56,7 +56,7 @@
   }
   .info-col-contact li span,
     .info-col-contact li address {
-    color: var(--color-footer);
+    color: var(--color-gray-dark);
     font-size: 14px;
   }
   

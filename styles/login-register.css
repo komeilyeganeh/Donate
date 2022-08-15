@@ -17,22 +17,37 @@ input:not(input[type="checkbox"], input[type="submit"]) {
     color: var(--color-blue-dark);
 }
 
+/* ===== Login form ===== */
 .login-container {
     display: flex;
 }
 .login-content {
     width: 520px;
 }
-.login-content-box {
-    margin-top: 344px;
+.login-content-box,
+.register-content-box {
+    position: absolute;
     display: flex;
+    top: 290px;
     flex-direction: column;
     row-gap: 40px;
-    padding-right: 100px;
+    padding: 20px 100px 20px 0;
+    opacity: 0;
+    visibility: visible;
+    z-index: -100;
+}
+.login-content-box.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+.register-content-box.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
 }
 .login-ui {
     width: calc(100% - 520px);
-    height: 1000px;
     background-image: url("../assets/images/bg-login.png");
     background-position: center;
     background-size: cover;
@@ -40,10 +55,22 @@ input:not(input[type="checkbox"], input[type="submit"]) {
     flex-direction: column;
     align-items: flex-end;
 }
-.login-title {
+.login-title,
+.register-title {
     font-size: 30px;
     font-weight: 700;
     color: var(--color-blue-dark);
+    transition: .5s ease-in;
+}
+.login-title {
+    transform: translateY(130%);
+    opacity: 0;
+    visibility: hidden;
+}
+.login-content-box.active .login-title {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 .form {
     width: 100%;
@@ -71,9 +98,9 @@ input:not(input[type="checkbox"], input[type="submit"]) {
     right: 10%;
     transform: translateY(-50%);
     font-size: 14px;
-    color: var(--color-blue-dark);
+    color: var(--color-gray-dark);
     pointer-events: none;
-    transition: .3s ease-in;
+    transition: .2s ease-in;
 }
 .form-control .form-icon {
     position: absolute;
@@ -110,7 +137,8 @@ input:not(input[type="checkbox"], input[type="submit"]) {
     color: var(--color-blue-icon);
     font-size: 16px;
 }
-.login-submit {
+.login-submit,
+.register-submit {
     color: var(--color-white);
     height: 50px;
     font-size: 20px;
@@ -165,14 +193,16 @@ input:not(input[type="checkbox"], input[type="submit"]) {
     transform: translate(50%, -55%);
     border-radius: 50%;
 }
-.register-link {
+.register-link,
+.login-link {
     text-align: center;
 }
 .register-link h5 {
     font-size: 16px;
     font-weight: 400;
 }
-.register-link h5 a {
+.register-link h5 a,
+.login-link a {
     color: var(--color-blue);
 }
 .links-bottom {
