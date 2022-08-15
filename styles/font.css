@@ -1,0 +1,7 @@
+/* Persian Font */
+@font-face {
+    font-family: "shabnam";
+    src: url("../assets/fonts/Shabnam-FD.eot") format("eot"),
+      url("../assets/fonts/Shabnam-FD.ttf") format("ttf"),
+      url("../assets/fonts/Shabnam-FD.woff") format("woff");
+  }

@@ -1,0 +1,19 @@
+/* colors */
+:root {
+    --color-body: #f9fafb;
+    --color-white: #fff;
+    --color-gray: #d8d8d8;
+    --color-gray-2: #e5e5e5;
+    --color-gray-3: #f3f3f3;
+    --color-gray-4: #959595;
+    --color-blue-dark: #363853;
+    --color-blue: #004893;
+    --color-blue-icon: #0d99ff;
+    --color-white-2: #f2fcfe;
+    --color-blue-light: #e5f6fd;
+    --color-blue-light-2: #c1ebfb;
+    --color-footer: #8e8e8e;
+    --color-copyright: #4b5563;
+    --color-border-input: #C9C9C9;
+  }
+  
