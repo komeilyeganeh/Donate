@@ -1,6 +1,14 @@
 @import "./colors.css";
 @import "./font.css";
 
+/* Persian Font */
+@font-face {
+  font-family: "shabnam";
+  src: url("../assets/fonts/Shabnam-FD.eot") format("eot"),
+    url("../assets/fonts/Shabnam-FD.ttf") format("ttf"),
+    url("../assets/fonts/Shabnam-FD.woff") format("woff");
+}
+
 /* ===== Reset css ===== */
 * {
   padding: 0;
@@ -11,6 +19,7 @@
 body {
   direction: rtl;
   background-color: var(--color-body);
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
