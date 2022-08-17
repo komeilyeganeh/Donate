@@ -207,7 +207,7 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
 }
 .services-about {
   color: var(--color-blue-dark);
-  width: 832px;
+  max-width: 832px;
   text-align: center;
   line-height: 32px;
   margin: 0 auto;
@@ -219,7 +219,7 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
   margin-top: 4rem;
 }
 .service-item {
-  width: 332px;
+  width: 24%;
   height: 624px;
   background-color: var(--color-white);
   border-radius: 32px;
@@ -310,7 +310,7 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
 }
 .team-about {
   color: var(--color-blue-dark);
-  width: 832px;
+  max-width: 832px;
   text-align: center;
   line-height: 32px;
   margin: 0 auto;
@@ -322,7 +322,7 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
 }
 .member {
   margin-top: 4rem;
-  width: 240px;
+  width: 19%;
   height: 270px;
   background-color: var(--color-white);
   box-shadow: 0px 5px 15px rgba(149, 149, 149, 0.15);
@@ -355,10 +355,13 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
 /* ===== Customers section styles ===== */
 .section-customers {
   margin-top: 2rem;
-  height: 627px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.customer-text {
+  width: 60%;
+  padding-left: 20px;
 }
 .customer-title {
   font-size: 39px;
@@ -372,7 +375,6 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
   margin-top: 6px;
 }
 .customer-desc {
-  width: 582px;
   text-align: justify;
   color: var(--color-blue-dark);
   font-size: 16px;
@@ -381,7 +383,6 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
 }
 .customers-list {
   width: 789px;
-  height: 627px;
   background-color: var(--color-gray-3);
   border-radius: 0px 30px 30px 0px;
   display: flex;
@@ -400,7 +401,7 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
   row-gap: 15px;
 }
 .customer-row .logo-icon {
-  width: 205px;
+  width: 32%;
   height: 170px;
   background-color: var(--color-white);
   border-radius: 32px;
@@ -1170,6 +1171,34 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
 }
 
 /* ========== Media Queries ==========_ */
+@media only screen and (max-width: 1200px) {
+  .about-image img {
+    width: 500px;
+  }
+  .about-desc {
+    padding-left: 30px;
+  }
+  .service-items {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .service-item {
+    width: 48%;
+  }
+  .team-members {
+    flex-wrap: wrap;
+  }
+  .member {
+    width: 23%;
+  }
+  .customer-row {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .customer-row .logo-icon {
+    width: 40%;
+  }
+}
 @media only screen and (max-width: 991px) {
   .slide-container {
     top: 30%;
@@ -1187,6 +1216,38 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
   }
   .slide-links ul li {
     font-size: 18px;
+  }
+  .section-about {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .about-text {
+    width: 100%;
+  }
+  .about-desc {
+    padding-left: 0;
+  }
+  .about-image {
+    margin-top: 30px;
+  }
+  .member {
+    width: 30%;
+  }
+  .section-customers {
+    flex-direction: column;
+  }
+  .customer-text {
+    width: 100%;
+  }
+  .customer-row .logo-icon {
+    width: 30%;
+  }
+  .customers-list {
+    width: 100%;
+  }
+  .footer-columns {
+    flex-wrap: wrap;
+    row-gap: 40px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1208,8 +1269,43 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
     left: 50%;
     transform: translateX(-50%);
   }
+  .section-about {
+    margin-top: 11rem;
+  }
+  .about-title {
+    font-size: 30px;
+  }
+  .service-item {
+    width: 80%;
+  } 
+  .service-items {
+    justify-content: center;
+  }
+  .service-title {
+    font-size: 20px;
+  }
+  .member {
+    width: 45%;
+  }
+  .name-member {
+    font-size: 19px;
+  }
+  .job-member {
+    font-size: 14px;
+  }
+  .section-customers {
+    margin-top: 0;
+  }
+  .customer-row .logo-icon {
+    height: auto;
+    width: 32%;
+    padding: 1rem;
+  }
 }
 @media only screen and (max-width: 576px) {
+  section:not(.section-slide, .section-header-service, .section-header-about) {
+    padding: 70px 20px;
+  }
   .slide-container {
     top: 20%;
   }
@@ -1219,5 +1315,63 @@ section:not(.section-slide, .section-header-service, .section-header-about) {
   .slide-box-desc,
   .btn-more-service {
     font-size: 15px;
+  }
+  .about-title {
+    font-size: 25px;
+  }
+  .about-desc {
+    font-size: 14px;
+  }
+  .about-image img {
+    width: 100%;
+  }
+  .about-shape {
+    width: 200px;
+    height: 200px;
+    top: 15%;
+  }
+  .service-item {
+    width: 100%;
+    font-size: 13px;
+  } 
+  .member {
+    width: 60%;
+    margin-top: 1rem;
+  }
+  .team-members {
+    justify-content: center;
+  }
+  .section-title {
+    font-size: 25px;
+  }
+  .customer-title {
+    font-size: 30px;
+  }
+  .customer-subtitle {
+    font-size: 18px;
+  }
+  .customer-desc {
+    font-size: 15px;
+  }
+  .footer-col-title {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .slide-container {
+    top: 10%;
+    padding: 0 14px;
+  }
+  .slide-links ul li {
+    font-size: 16px;
+  }
+  .member {
+    width: 100%;
+  }
+  .customer-row .logo-icon {
+    width: 100%;
+  }
+  .copyright p {
+    font-size: 12px;
   }
 }
