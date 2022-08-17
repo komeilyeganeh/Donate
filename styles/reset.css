@@ -1,19 +1,23 @@
+@import "./colors.css";
 @import "./font.css";
 
 /* ===== Reset css ===== */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "shabnam";
-  }
-  body {
-    direction: rtl;
-    background-color: var(--color-body);
-  }
-  a {
-    text-decoration: none;
-  }
-  li {
-    list-style: none;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "shabnam";
+}
+body {
+  direction: rtl;
+  background-color: var(--color-body);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
