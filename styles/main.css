@@ -1316,6 +1316,15 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   .service-image:last-child {
     padding: 1rem;
   }
+  .header-about-text {
+    width: 60%;
+  }
+  .header-about-image {
+    width: 40%;
+  }
+  .header-about-image > img {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 991px) {
   .slide-container {
@@ -1431,6 +1440,30 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   .detail-service-title {
     font-size: 23px;
   }
+  .header-about-text {
+    width: 100%;
+  }
+  .header-about {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .header-about-image {
+    transform: translateY(0);
+  }
+  .section-header-about {
+    height: auto;
+  }
+  .header-about-desc {
+    font-size: 18px;
+  }
+  .section-about-main {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .about-main-text,
+  .about-main-video {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .slide-container {
@@ -1523,6 +1556,15 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   }
   .service-form {
     width: 100%;
+  }
+  .header-about-subtitle {
+    font-size: 20px;
+  }
+  .header-about-desc {
+    font-size: 16px;
+  }
+  .header-about-image {
+    width: 70%;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -1620,8 +1662,18 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   .form-group .form-control {
     width: 100%;
   }
+  .about-main-text,
+  .about-main-video {
+    width: 100%;
+  }
+  .header-about-title {
+    font-size: 27px;
+  }
 }
 @media only screen and (max-width: 400px) {
+  h4 {
+    font-size: 20px !important;
+  }
   section:not(.section-slide, .section-header-service, .section-header-about) {
     padding: 40px 20px !important;
   } 
