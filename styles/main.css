@@ -418,12 +418,14 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
 
 /* ===== Login form ===== */
 .form-container {
+  position: relative;
   background-color: var(--color-white);
   display: flex;
   height: 1021px;
 }
 .form-content {
-  width: calc(100% - 950px);
+  width: calc(100% - 60%);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -455,10 +457,11 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   z-index: 1;
 }
 .login-ui {
-  width: 950px;
+  width: 60%;
   background-image: url("../assets/images/bg-login.png");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -498,8 +501,8 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
 }
 .login-content-box .form-control input:focus + .placeholder,
 .register-content-box .form-control input:focus + .placeholder,
-.login-content-box .form-control input:not(:placeholder-shown) + .placeholder,
-.register-content-box .form-control input:not(:placeholder-shown) + .placeholder {
+.register-content-box .form-control input:not(:placeholder-shown) + .placeholder,
+.login-content-box .form-control input:not(:placeholder-shown) + .placeholder {
   transform: translateY(-170%);
 }
 
@@ -707,6 +710,7 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
 .login-ui-text {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 .login-ui-text img {
   transform: translateY(-80px);
@@ -714,9 +718,9 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
 .login-ui-text p {
   font-size: 29px;
   color: var(--color-white);
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
   text-align: left;
-  transform: translateY(-80px);
+  transform: translateY(-80px) rotate(-180deg);
   font-weight: 400;
 }
 .login-ui-socials {
@@ -1338,6 +1342,15 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   .overlay-blue {
     width: 50%;
   }
+  .form-content {
+    width: calc(100% - 55%);
+  }
+  .login-ui {
+    width: 55%;
+  }
+  .login-ui-line {
+    width: 100px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .slide-container {
@@ -1486,6 +1499,33 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
     flex-direction: column;
     align-items: center;
   }
+  .form-content {
+    position: absolute;
+  }
+  .login-ui {
+    width: 100%;
+  }
+  .login-content-box,
+  .register-content-box {
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 20px;
+    top: 30px;
+    min-height: auto;
+  }
+  .form-container {
+    justify-content: center;
+  }
+  .login-ui-text p,
+  .login-ui-text img {
+    display: none;
+  }
+  .login-ui-socials {
+    margin-top: 10rem;
+  }
+  .links-bottom {
+    padding-right: 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .slide-container {
@@ -1616,6 +1656,21 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   .header-contact-title {
     font-size: 35px;
   }
+  .login-ui {
+    background-size: 200% 100%;
+  }
+  .form-content {
+    width: 90%;
+  }
+  .form-login-title, .form-register-title {
+    font-size: 25px;
+  }
+  .placeholder {
+    font-size: 12px;
+  }
+  .login-submit, .register-submit {
+    font-size: 17px;
+  }
 }
 @media only screen and (max-width: 576px) {
   h4 {
@@ -1733,6 +1788,24 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   }
   #gmap_canvas {
     width: 100% !important;
+  }
+  .login-content-box, .register-content-box {
+    width: 100%;
+  }
+  .login-ui-socials {
+    margin-top: 6rem;
+  }
+  .login-ui-line {
+    width: 45px;
+  }
+  .form-login-title, .form-register-title {
+    font-size: 22px;
+  }
+  .placeholder {
+    right: 14%;
+  }
+  .remember-password {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 400px) {
