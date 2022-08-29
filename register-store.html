@@ -97,7 +97,7 @@
               <form action="">
                 <h4 class="form-box-title">مشخصات فردی</h4>
                 <div class="form-box-items">
-                  <div class="form-store-group">
+                  <div class="form-store-group form-person-type">
                     <div>
                       <input type="radio" name="type-person" checked />
                       <span>حقیقی</span>
@@ -128,9 +128,11 @@
                       <input type="date" placeholder="تاریخ تولد" />
                       <div class="marital">
                         <span>وضعیت تاهل :</span>
-                        <input type="radio" name="marital-status" checked/><span
-                          >مجرد</span
-                        >
+                        <input
+                          type="radio"
+                          name="marital-status"
+                          checked
+                        /><span>مجرد</span>
                         <input type="radio" name="marital-status" /><span
                           >متاهل</span
                         >
@@ -154,18 +156,20 @@
                     <div class="form-store-input">
                       <div class="job-status-input">
                         <span>وضعیت شغل :</span>
-                        <input type="radio" name="job-status" checked/><span
-                          >شاغل</span
-                        >
-                        <input type="radio" name="job-status" /><span
-                          >بیکار</span
-                        >
-                        <input type="radio" name="job-status" /><span
-                          >محصل</span
-                        >
-                        <input type="radio" name="job-status" /><span
-                          >بازنشسته</span
-                        >
+                        <div>
+                          <input type="radio" name="job-status" checked /><span
+                            >شاغل</span
+                          >
+                          <input type="radio" name="job-status" /><span
+                            >بیکار</span
+                          >
+                          <input type="radio" name="job-status" /><span
+                            >محصل</span
+                          >
+                          <input type="radio" name="job-status" /><span
+                            >بازنشسته</span
+                          >
+                        </div>
                       </div>
                     </div>
                     <div class="form-store-input">
@@ -189,16 +193,16 @@
                       <input type="email" placeholder="پست الکترونیکی" />
                     </div>
                     <div class="form-store-input">
-                        <select name="provinces" id="">
-                            <option value="" disabled selected> استان</option>
-                            <option value="esfahan">اصفهان</option>
-                            <option value="mashhad">مشهد</option>
-                        </select>
-                        <select name="cities" id="">
-                            <option value="" disabled selected> شهر</option>
-                            <option value="najafabad">نجف آباد</option>
-                            <option value="sabzevar">سبزوار</option>
-                        </select>
+                      <select name="provinces" id="">
+                        <option value="" disabled selected>استان</option>
+                        <option value="esfahan">اصفهان</option>
+                        <option value="mashhad">مشهد</option>
+                      </select>
+                      <select name="cities" id="">
+                        <option value="" disabled selected>شهر</option>
+                        <option value="najafabad">نجف آباد</option>
+                        <option value="sabzevar">سبزوار</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-store-group">
@@ -213,9 +217,11 @@
                       <input type="text" placeholder="عنوان فروشگاه" />
                     </div>
                     <div class="form-store-input">
-                        <select name="store-category" id="">
-                            <option value="" disabled selected>نوع دسته فروشگاه</option>
-                        </select>
+                      <select name="store-category" id="">
+                        <option value="" disabled selected>
+                          نوع دسته فروشگاه
+                        </option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-store-group">
@@ -223,18 +229,24 @@
                       <input type="text" placeholder="آدرس وب سایت" />
                     </div>
                     <div class="form-store-input">
-                        <input type="text" placeholder="آدرس درگاه بازگشت بانکی" />
-                      </div>
+                      <input
+                        type="text"
+                        placeholder="آدرس درگاه بازگشت بانکی"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div class="policy">
-                    <input type="checkbox" />
-                    <p><a href="">قوانین و مقررات</a> را مطالعه کرده ام و پذیرفته ام.</p>
+                  <input type="checkbox" />
+                  <p>
+                    <a href="">قوانین و مقررات</a> را مطالعه کرده ام و پذیرفته
+                    ام.
+                  </p>
                 </div>
 
                 <div class="btn-submit-store">
-                    <button type="submit" class="form-store-btn">ثبت نام</button>
+                  <button type="submit" class="form-store-btn">ثبت نام</button>
                 </div>
               </form>
             </div>
