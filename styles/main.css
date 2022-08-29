@@ -4,18 +4,23 @@
 @import "./footer.css";
 
 
-input:not(input[type="checkbox"], input[type="submit"]) {
+input:not(input[type="checkbox"], input[type="submit"], input[type="radio"]),
+select {
   outline: none;
   width: 100%;
   height: 60px;
   border: 1px solid var(--color-border-input);
   border-radius: 5px;
-  padding: 2px 40px;
+  padding: 2px 20px;
   font-size: 16px;
   color: var(--color-blue-dark);
 }
+select option {
+  font-size: 16px;
+  color: var(--color-blue-dark) !important;
+}
 
-section:not(.section-slide, .section-donate-info, .section-header-service, .section-header-about, .section-header-contact, .section-service-donate) {
+section:not(.section-slide, .section-donate-info, .section-form-store, .section-header-service, .section-header-about, .section-header-contact, .section-service-donate) {
   padding: 70px 90px;
 }
 .section-title {
@@ -1308,6 +1313,161 @@ section:not(.section-slide, .section-donate-info, .section-header-service, .sect
   display: none;
   align-items: center;
   column-gap: 10px;
+}
+
+/* ========== Register-store Page ========== */
+.path-page span {
+  color: var(--color-blue);
+}
+.path-page span a {
+  color: var(--color-blue);
+}
+.form-store-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.form-store-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.form-store-desc {
+  font-size: 14px;
+  color: var(--color-black-3);
+  margin-top: 1.5rem;
+}
+.form-store-items {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+.form-store-steps {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+}
+.form-store-steps::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-gray);
+  top: 26%;
+  right: 0;
+  z-index: -1;
+}
+.form-store-steps {
+  display: flex;
+  justify-content: space-between;
+}
+.form-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.form-step:first-child {
+  transform: translateX(25px);
+}
+.form-step:last-child {
+  transform: translateX(-25px);
+}
+.step-icon {
+  text-align: center;
+  line-height: 26px;
+}
+.step-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-dark);
+}
+.step-text {
+  font-size: 14px;
+  color: var(--color-gray-dark);
+  margin-top: .5rem;
+}
+.icon {
+  color: var(--color-gray-dark);
+}
+.form-step.active .step-text {
+  color: var(--color-blue-icon);
+}
+.form-step.active .step-icon .icon {
+  color: var(--color-blue-icon);
+}
+.form-step.active .step-icon {
+  border-color: var(--color-blue-icon);
+}
+.form-box-title {
+  font-size: 18px;
+  margin: 1.3rem 0;
+}
+.form-box-items {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.form-store-group {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+}
+.form-store-group div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 13px;
+}
+.form-store-input {
+  width: 50%;
+}
+.form-store-group div span  {
+  color: var(--color-gray-dark);
+}
+.birthdate-marital,
+.job-status {
+  width: 100%;
+}
+.form-store-input input[type="date"] {
+  width: 40%;
+}
+.marital span,
+.job-status-input span {
+  font-size: 14px;
+}
+.policy {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.policy p > a {
+  color: var(--color-blue-icon);
+}
+.btn-submit-store {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4rem;
+}
+.form-store-btn {
+  width: 300px;
+  padding: 15px 60px;
+  border-radius: 200px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border: none;
+  font-size: 18px;
 }
 
 /* ========== Media Queries ==========_ */
