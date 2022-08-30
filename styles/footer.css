@@ -35,8 +35,8 @@
     flex-direction: column;
     row-gap: 20px;
   }
-  .footer-service-list li,
-  .footer-links-list li {
+  .footer-service-list li a,
+  .footer-links-list li a {
     color: var(--color-gray-dark);
     font-size: 14px;
   }
